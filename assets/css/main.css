@@ -297,6 +297,9 @@ template {
 [hidden] {
   display: none; }
 
+* {
+  font-family: Helvetica, sans-serif; }
+
 .gigantic, .huge, .large, .bigger, .big,
 h1, h2, h3, h4, h5, h6 {
   color: #222;
@@ -348,3 +351,89 @@ hr {
   outline: 0; }
   hr:hover, hr:focus {
     color: #40a6ff; }
+
+body {
+  background: #d1d8e0; }
+
+.home-wrap header {
+  width: 135px;
+  background: white;
+  padding: 38px 0; }
+  .home-wrap header .header-position {
+    display: -ms-flexbox;
+    display: flex;
+    padding: 38px 0;
+    background: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    max-width: 135px;
+    -ms-flex-direction: column;
+        flex-direction: column;
+    -ms-flex-pack: justify;
+        justify-content: space-between; }
+  .home-wrap header .logo {
+    overflow: hidden;
+    text-indent: 101%;
+    white-space: nowrap;
+    background-image: url(/assets/img/logo.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    height: 150px;
+    padding: 0;
+    margin: 0; }
+  .home-wrap header .site-nav ul {
+    list-style: none;
+    margin: 20px 0;
+    padding: 0 20px 0 0;
+    text-align: right; }
+    .home-wrap header .site-nav ul li {
+      margin-bottom: 10px; }
+      .home-wrap header .site-nav ul li:last-child {
+        margin-bottom: 0; }
+
+.email-link {
+  display: block;
+  text-align: right;
+  padding-right: 20px; }
+
+.mobile-nav-toggle {
+  width: 50px;
+  height: 50px;
+  background: pink;
+  margin-right: 20px; }
+  .mobile-nav-toggle span {
+    height: 2px;
+    width: 50px;
+    background: #333;
+    margin-right: 20px; }
+
+@media (max-width: 775px) {
+  .home-wrap header {
+    width: auto;
+    padding: 20px 0; }
+    .home-wrap header .header-position {
+      width: auto;
+      position: relative;
+      top: auto;
+      bottom: auto;
+      left: auto;
+      -ms-flex-direction: row;
+          flex-direction: row;
+      -ms-flex-align: center;
+          align-items: center; }
+      .home-wrap header .header-position .site-nav,
+      .home-wrap header .header-position .email-link {
+        display: none; }
+      .home-wrap header .header-position .logo {
+        height: 100px; } }
+
+.home-wrap {
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 100vh; }
+  @media (max-width: 775px) {
+    .home-wrap {
+      display: block; } }

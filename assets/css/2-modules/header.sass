@@ -1,0 +1,81 @@
+.home-wrap header
+  width: 135px
+  background: white
+  padding: 38px 0
+
+  .header-position
+    display: flex
+    padding: 38px 0
+    background: white
+    position: fixed
+    top: 0
+    left: 0
+    bottom: 0
+    max-width: 135px
+    flex-direction: column
+    justify-content: space-between
+
+  .logo
+    +hide-text
+    background:
+      image: url(/assets/img/logo.svg)
+      repeat: no-repeat
+      position: center
+      size: contain
+    height: 150px
+    padding: 0
+    margin: 0
+
+  .site-nav
+    ul
+      list-style: none
+      margin: 20px 0
+      padding: 0 20px 0 0
+      text-align: right
+
+      li
+          margin-bottom: 10px
+          &:last-child
+            margin-bottom: 0
+
+.email-link
+  display: block
+  text-align: right
+  padding-right: 20px
+
+
+.mobile-nav-toggle
+  width: 50px
+  height: 50px
+  background: pink
+  margin-right: 20px
+  span
+    height: 2px
+    width: 50px
+    background: #333
+    margin-right: 20px
+
+
+
+
+@media (max-width: 775px)
+    .home-wrap header
+      width: auto
+      padding: 20px 0
+
+      .header-position
+        width: auto
+        position: relative
+        top: auto
+        bottom: auto
+        left: auto
+        flex-direction: row
+        align-items: center
+
+
+        .site-nav,
+        .email-link
+          display: none
+
+        .logo
+            height: 100px
